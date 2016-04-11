@@ -1,10 +1,27 @@
 #include <Python.h>
 
+#ifdef _MSC_VER
+
+typedef __int32 int32_t;
+typedef unsigned __int32 uint32_t;
+typedef __int64 int64_t;
+typedef unsigned __int64 uint64_t;
+typedef int mode_t;
+
+#else
+#include <stdint.h>
+#endif
+
 #include <net-snmp/net-snmp-config.h>
 #include <net-snmp/net-snmp-includes.h>
 #include <net-snmp/snmpv3_api.h>
 #include <sys/types.h>
+#ifdef _WIN32
+#include <winsock2.h>
+#else
 #include <arpa/inet.h>
+#include <netdb.h>
+#endif
 #include <errno.h>
 #include <stdio.h>
 #include <fcntl.h>
@@ -12,7 +29,6 @@
 #ifdef I_SYS_TIME
 #include <sys/time.h>
 #endif
-#include <netdb.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
