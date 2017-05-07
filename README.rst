@@ -1,6 +1,10 @@
 Easy SNMP
 =========
 
+.. image:: https://badges.gitter.im/easysnmp/Lobby.svg
+   :alt: Join the chat at https://gitter.im/easysnmp/Lobby
+   :target: https://gitter.im/easysnmp/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 |Build Status| |Coverage Status| |License|
 
 .. |Build Status| image:: https://travis-ci.org/fgimian/easysnmp.svg?branch=master
